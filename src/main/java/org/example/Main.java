@@ -1,27 +1,22 @@
 package org.example;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Choose operation:");
-        System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division");
-        Scanner sc = new Scanner(System.in);
-        String action = sc.next();
+        String action = args[1];
         Integer firstNumber = Integer.parseInt(args[0]);
-        Integer secondNumber = Integer.parseInt(args[1]);
+        Integer secondNumber = Integer.parseInt(args[2]);
 
         switch (action) {
-            case "1":
+            case "+":
                 System.out.println("Answer: " + (firstNumber + secondNumber));
                 break;
-            case "2":
+            case "-":
                 System.out.println("Answer: " + (firstNumber - secondNumber));
                 break;
-            case "3":
+            case "x":
                 System.out.println("Answer: " + (firstNumber * secondNumber));
                 break;
-            case "4":
+            case "/":
                 System.out.println("Answer: " + (firstNumber / secondNumber));
                 break;
         }
